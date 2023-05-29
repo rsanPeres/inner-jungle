@@ -26,6 +26,8 @@ dependencies {
 	implementation 'org.flywaydb:flyway-core'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
 	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'org.apache.poi:poi:3.9'
+	implementation 'org.apache.poi:poi-ooxml:3.9'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'

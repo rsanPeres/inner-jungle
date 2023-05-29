@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  mongodb_innerJungle:
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - app-db-read:/var/lib/mongo/dataRead
+      - app-db-write:/var/lib/mongo/dataWrite
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - '8081:8081'
+    links:
+      - mongodb_innerJungle:mongo
+
+volumes:
+  app-db-read:
+  app-db-write:
